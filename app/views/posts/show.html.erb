@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Host name:</strong>
+  <%= @post.host_name %>
+</p>
+
+<p>
+  <strong>Host email:</strong>
+  <%= @post.host_email %>
+</p>
+
+<p>
+  <strong>Numgsts:</strong>
+  <%= @post.numgsts %>
+</p>
+
+<p>
+  <strong>Guest names:</strong>
+  <%= @post.guest_names %>
+</p>
+
+<p>
+  <strong>Venue:</strong>
+  <%= @post.venue %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @post.location %>
+</p>
+
+<p>
+  <strong>Theme:</strong>
+  <%= @post.theme %>
+</p>
+
+<p>
+  <strong>When:</strong>
+  <%= @post.when %>
+</p>
+
+<p>
+  <strong>When its over:</strong>
+  <%= @post.when_its_over %>
+</p>
+
+<p>
+  <strong>Descript:</strong>
+  <%= @post.descript %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

@@ -1,0 +1,67 @@
+<%= form_for(post) do |f| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label>Hosted By</label>
+    <%= f.text_field :host_name %>
+  </div>
+
+  <div class="field">
+    <label>Host Email</label>
+    <%= f.text_field :host_email %>
+  </div>
+
+  <div class="field">
+      <label>Number of Guests</label>
+    <%= f.number_field :numgsts %>
+  </div>
+
+  <div class="field">
+   <label>Guest Names (separate by ',')</label>
+    <%= f.text_area :guest_names %>
+  </div>
+
+  <div class="field">
+    <label>Venue Name</label>
+    <%= f.text_field :venue %>
+  </div>
+
+  <div class="field">
+  <label>Venue Location</label>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+      <label>Party Theme</label>
+    <%= f.text_field :theme %>
+  </div>
+
+  <div class="field">
+     <label>Party Start Time</label>
+    <%= f.datetime_select :when %>
+  </div>
+
+  <div class="field">
+  <label>Party End Time</label>
+    <%= f.datetime_select :when_its_over %>
+  </div>
+
+  <div class="field">
+    <label>Description</label>
+    <%= f.text_area :descript %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
